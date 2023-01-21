@@ -29,7 +29,8 @@ local Sliders = {}
 local ColorPicker = { Loading = false, LastGenerated = 0 }
 local Dragging = false
 local DraggingUI = false
-local Rainbow = false
+local 
+= false
 local DragOffset = V2New()
 local DraggingWhat = nil
 local OldData = {}
@@ -740,7 +741,7 @@ Options('ShowTracers', 'Lines', true);
 Options('ShowDot', 'Head Dot', false);
 Options('VisCheck', 'Checar visibilidade', false);
 -- Options('
-', 'Rainbow Mode');
+', 'Rainbow Mode', true);
 Options('TextSize', 'Text Size', syn and 18 or 14, 10, 24); -- cuz synapse fonts look weird???
 Options('MaxDistance', 'Max Distance', 2500, 100, 25000);
 Options('RefreshRate', 'Refresh Rate (ms)', 5, 1, 200);
