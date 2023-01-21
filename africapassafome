@@ -29,8 +29,7 @@ local Sliders = {}
 local ColorPicker = { Loading = false, LastGenerated = 0 }
 local Dragging = false
 local DraggingUI = false
-local 
-= false
+local Rainbow = false
 local DragOffset = V2New()
 local DraggingWhat = nil
 local OldData = {}
@@ -730,24 +729,25 @@ function Load()
 	end
 end
 
-Options('Enabled', 'ESP Aberto', true);
+Options('Enabled', 'ESP Ativar', true);
 Options('ShowTeam', 'Mostrar Time', true);
-Options('ShowTeamColor', 'Mostrar cor do time', false);
+Options('ShowTeamColor', 'Mostrar cor do Time', false);
 Options('ShowName', 'Mostrar nomes', true);
-Options('ShowDistance', 'Mostrar Distancia', true);
-Options('ShowHealth', 'Mostrar Vida', true);
-Options('ShowBoxes', 'Box', true);
-Options('ShowTracers', 'Lines', true);
-Options('ShowDot', 'Head Dot', false);
-Options('VisCheck', 'Checar visibilidade', false);
--- Options('
-', 'Rainbow Mode', true);
+Options('ShowDistance', 'Mostrar Distance', true);
+Options('ShowHealth', 'Mostrar Nomes', true);
+Options('ShowBoxes', 'Mostrar Caixas', true);
+Options('ShowTracers', 'Mostrar Linhas', true);
+Options('ShowDot', 'Mostrar Head Dot', false);
+Options('VisCheck', 'Checar Visibilidade', false);
+Options('Crosshair', 'Crosshair', false);
+Options('TextOutline', 'Texto Fora da Linha', true);
+-- Options('Rainbow', 'Rainbow Mode', false);
 Options('TextSize', 'Text Size', syn and 18 or 14, 10, 24); -- cuz synapse fonts look weird???
 Options('MaxDistance', 'Max Distance', 2500, 100, 25000);
 Options('RefreshRate', 'Refresh Rate (ms)', 5, 1, 200);
 Options('YOffset', 'Y Offset', 0, -200, 200);
-Options('MenuKey', 'Abrir menu', Enum.KeyCode.F4, 1);
-Options('ToggleKey', 'Toggle Key', Enum.KeyCode.F3, 1);
+Options('MenuKey', 'Abrir Menu', Enum.KeyCode.F4, 1);
+Options('ToggleKey', 'ESP Key', Enum.KeyCode.F3, 1);
 Options('ChangeColors', SENTINEL_LOADED and 'Sentinel Unsupported' or 'Change Colors', function()
 	if SENTINEL_LOADED then return end
 
@@ -790,7 +790,7 @@ Options('ChangeColors', SENTINEL_LOADED and 'Sentinel Unsupported' or 'Change Co
 			end
 		};
 		{
-			Type = 'Button'; Text = 'Rainbow Mode', false;
+			Type = 'Button'; Text = 'Rainbow Mode';
 
 			Function = function()
 				Rainbow = not Rainbow;
@@ -1577,7 +1577,7 @@ function CreateMenu(NewPosition) -- Create Menu
 	Menu:AddMenuInstance('TopBarText', 'Text', {
 		Size 		= 25;
 		Position	= shared.MenuDrawingData.Instances.TopBarTwo.Position + V2New(25, 10);
-		Text		= 'Fain.rar ESP CRACKED XD';
+		Text		= 'Fain.rar ESP XD';
 		Color		= Colors.Secondary.Light;
 		Visible		= true;
 		Transparency= 1; -- proto outline fix
@@ -1587,7 +1587,7 @@ function CreateMenu(NewPosition) -- Create Menu
 	Menu:AddMenuInstance('TopBarTextBR', 'Text', {
 		Size 		= 18;
 		Position	= shared.MenuDrawingData.Instances.TopBarTwo.Position + V2New(BaseSize.X - 75, 25);
-		Text		= 'by zezinx';
+		Text		= 'by zezinxnigga';
 		Color		= Colors.Secondary.Light;
 		Visible		= true;
 		Transparency= 1;
