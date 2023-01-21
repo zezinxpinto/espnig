@@ -739,7 +739,8 @@ Options('ShowBoxes', 'Box', true);
 Options('ShowTracers', 'Lines', true);
 Options('ShowDot', 'Head Dot', false);
 Options('VisCheck', 'Checar visibilidade', false);
--- Options('Rainbow', 'Rainbow Mode', false);
+-- Options('
+', 'Rainbow Mode');
 Options('TextSize', 'Text Size', syn and 18 or 14, 10, 24); -- cuz synapse fonts look weird???
 Options('MaxDistance', 'Max Distance', 2500, 100, 25000);
 Options('RefreshRate', 'Refresh Rate (ms)', 5, 1, 200);
